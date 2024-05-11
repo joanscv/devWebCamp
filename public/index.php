@@ -45,9 +45,13 @@ $router->get('/admin/registrados', [RegistradosController::class, 'index']);
 
 $router->get('/admin/regalos', [RegalosController::class, 'index']);
 
-// Ponentes
+// Crear Ponentes
 $router->get('/admin/ponentes/crear', [PonentesController::class, 'crear']);
 $router->post('/admin/ponentes/crear', [PonentesController::class, 'crear']);
-
+// Editar Ponentes
+$router->get('/admin/ponentes/editar', [PonentesController::class, 'editar']);
+$router->post('/admin/ponentes/editar', [PonentesController::class, 'editar']);
+// Eliminar ponenentes
+$router->post('/admin/ponentes/eliminar', [PonentesController::class, 'eliminar']);
 
 $router->comprobarRutas();
