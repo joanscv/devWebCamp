@@ -1,0 +1,6 @@
+node_modules
+includes/.env
+vendor
+materiales
+public/error.log
+public/build
