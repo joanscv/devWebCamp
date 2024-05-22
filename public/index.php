@@ -54,4 +54,8 @@ $router->post('/admin/ponentes/editar', [PonentesController::class, 'editar']);
 // Eliminar ponenentes
 $router->post('/admin/ponentes/eliminar', [PonentesController::class, 'eliminar']);
 
+// Crear Eventos
+$router->get('/admin/eventos/crear', [EventosController::class, 'crear']);
+$router->post('/admin/eventos/crear', [EventosController::class, 'crear']);
+
 $router->comprobarRutas();

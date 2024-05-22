@@ -44,7 +44,8 @@
     font-size: 1.8rem;
     color: rgba($color: v.$negro, $alpha: 0.8);
   }
-  &__input {
+  &__input,
+  &__select {
     padding: 1rem;
     border: 1px solid darken($color: v.$gris-claro, $amount: 20%);
     border-radius: 0.5rem;
@@ -55,6 +56,11 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+  }
+
+  &__radio {
+    display: flex;
+    gap: 2rem;
   }
 
   &__texto {
