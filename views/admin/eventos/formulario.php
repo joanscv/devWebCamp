@@ -6,7 +6,8 @@
                name="nombre" 
                id="nombre"
                class="formulario__input" 
-               placeholder="Nombre Evento">
+               placeholder="Nombre Evento"
+               value="<?php echo $evento->nombre; ?>">
   </div>
   <div class="formulario__campo">
         <label class="formulario__label" for="descripcion">Descripción</label>
@@ -15,14 +16,14 @@
               name="descripcion" 
               id="descripcion" 
               placeholder="Descripción Evento"
-              rows="8" ></textarea>
+              rows="8" ><?php echo $evento->descripcion; ?></textarea>
   </div>
   <div class="formulario__campo">
         <label class="formulario__label" for="categoria">Categoría o Tipo de Evento</label>
         <select name="categoria_id" id="categoria" class="formulario__select">
-          <option value="" disabled selected>- Seleccionar -</option>
+          <option value="" disabled>- Seleccionar -</option>
           <?php foreach($categorias as $categoria):?>
-            <option value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></option>
+            <option <?php echo $evento->categoria_id === $categoria->id ? 'selected' : '';?> value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></option>
           <?php endforeach; ?>
         </select>
   </div>
@@ -41,6 +42,7 @@
               </div>
             <?php endforeach; ?>
         </div>
+        <input type="hidden" name="dia_id" value="">
   </div>
 
   <div id="horas" class="formulario__campo">
@@ -69,6 +71,7 @@
                id="disponibles"
                name="disponibles"
                class="formulario__input" 
-               placeholder="Ej. 20">
+               placeholder="Ej. 20"
+               value="<?php echo $evento->disponibles; ?>">
   </div>
 </fieldset>
